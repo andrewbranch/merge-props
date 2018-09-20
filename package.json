@@ -1,0 +1,28 @@
+{
+  "name": "merge-props",
+  "version": "1.0.0",
+  "description": "Merges className, style, and DOM event handlers for React elements",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewbranch/merge-props.git"
+  },
+  "keywords": [
+    "React",
+    "merge",
+    "props"
+  ],
+  "author": "Andrew Branch <andrew@wheream.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewbranch/merge-props/issues"
+  },
+  "homepage": "https://github.com/andrewbranch/merge-props#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "typescript": "^3.0.3"
+  }
+}
