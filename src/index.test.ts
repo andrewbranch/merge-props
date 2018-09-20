@@ -1,4 +1,4 @@
-import { mergeProps } from './mergeProps';
+import mergeProps from './index';
 import { MergeableProps } from './types';
 
 describe('mergeProps', () => {

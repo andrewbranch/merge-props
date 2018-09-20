@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Merges className, style, and DOM event handlers for React elements",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --coverage",
     "build": "tsc",
-    "prepublish": "npm run test && npm run build"
+    "prepare": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
