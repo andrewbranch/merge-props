@@ -101,6 +101,7 @@ This project is written in TypeScript. Aside from class names and styles, it’s
 ## Gotchas
 
 **I got an error like `Didn’t know how to merge prop 'foo'`. What?**
+
 `mergeProps` knows how to merge `className`, `style`, and event handlers (any functions, in practice). If you pass it anything else, it will happily pass it through:
 
 ```jsx
