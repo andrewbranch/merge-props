@@ -1,10 +1,16 @@
-# merge-props [![Build Status](https://travis-ci.org/andrewbranch/merge-props.svg?branch=master)](https://travis-ci.org/andrewbranch/merge-props) [![codecov](https://codecov.io/gh/andrewbranch/merge-props/branch/master/graph/badge.svg)](https://codecov.io/gh/andrewbranch/merge-props)
+# merge-props [![Build Status](https://travis-ci.org/andrewbranch/merge-props.svg?branch=master)](https://travis-ci.org/andrewbranch/merge-props) [![codecov](https://codecov.io/gh/andrewbranch/merge-props/branch/master/graph/badge.svg)](https://codecov.io/gh/andrewbranch/merge-props) [![npm](https://img.shields.io/npm/v/merge-props.svg)](https://www.npmjs.com/package/merge-props) ![size](https://img.shields.io/bundlephobia/minzip/merge-props.svg)
 
 Merges React `className`, `style`, and DOM event handlers (`onClick`, `onFocus`, `on{LiterallyEveryEvent}`) by the following rules:
 
 - `className` props are concatenated
 - `style` props are shallow merged with later values taking precedence
 - functions are run in sequence from left to right.
+
+## Installation
+
+```
+npm install merge-props
+```
 
 ## Example usage
 
