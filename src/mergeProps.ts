@@ -33,7 +33,7 @@ function pushProp<K extends keyof MergeableProps>(
 
 /**
  * Merges sets of props together:
- *  - duplicate `classNames` get concatenated
+ *  - duplicate `className` props get concatenated
  *  - duplicate `style` props get shallow merged (later props have precedence for conflicting rules)
  *  - duplicate functions (to be used for event handlers) get called in order from left to right
  * @param props Sets of props to merge together. Later props have precedence.

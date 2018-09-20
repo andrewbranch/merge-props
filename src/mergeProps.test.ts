@@ -29,7 +29,7 @@ describe('mergeProps', () => {
     });
   });
 
-  test('style props are merged', () => {
+  test('styles are merged', () => {
     expect(mergeProps(
       { style: { display: 'none' } },
       { style: { color: 'red' } }
