@@ -2,7 +2,9 @@ import { MergeableProps } from './types';
 
 // Note: this is all miserably bad TypeScript, but the compiler
 // can’t quite make sense of what’s going on here yet. I think
-// the type assertions I’m making make sense
+// the type assertions I’m making make sense, but the compiler
+// just can’t infer it. The inputs and outputs are useful, though,
+// so I think it’s still worthwhile to be written in TypeScript.
 
 function pushProp<K extends keyof MergeableProps>(
   target: MergeableProps,
