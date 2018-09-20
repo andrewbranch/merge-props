@@ -1,4 +1,4 @@
-# merge-props
+# merge-props [![Build Status](https://travis-ci.org/andrewbranch/merge-props.svg?branch=master)](https://travis-ci.org/andrewbranch/merge-props) [![codecov](https://codecov.io/gh/andrewbranch/merge-props/branch/master/graph/badge.svg)](https://codecov.io/gh/andrewbranch/merge-props)
 
 Merges React `className`, `style`, and DOM event handlers (`onClick`, `onFocus`, `on{LiterallyEveryEvent}`) by the following rules:
 
