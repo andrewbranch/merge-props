@@ -4,7 +4,7 @@
   "description": "Merges className, style, and DOM event handlers for React elements",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,27 @@
   },
   "homepage": "https://github.com/andrewbranch/merge-props#readme",
   "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "@types/react": "^16.4.14",
     "jest": "^23.6.0",
+    "ts-jest": "^23.10.0",
     "typescript": "^3.0.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/?(*.)(spec|test).ts?(x)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/test/",
+      "/node_modules/"
+    ]
   }
 }
