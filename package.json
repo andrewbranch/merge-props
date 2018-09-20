@@ -4,7 +4,9 @@
   "description": "Merges className, style, and DOM event handlers for React elements",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "build": "tsc",
+    "prepublish": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
