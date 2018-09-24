@@ -32,3 +32,4 @@ jspm_packages/
 
 # Built output
 dist/
+!dist/index.d.ts
