@@ -38,7 +38,7 @@ function pushProp<K extends keyof MergeableProps>(
  *  - duplicate functions (to be used for event handlers) get called in order from left to right
  * @param props Sets of props to merge together. Later props have precedence.
  */
-export = function mergeProps<T extends MergeableProps>(...props: T[]): Required<T> {
+export default function mergeProps<T extends MergeableProps>(...props: T[]): Required<T> {
   if (props.length === 1) {
     return props[0] as Required<T>;
   }

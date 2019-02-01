@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/andrewbranch/merge-props#readme",
   "devDependencies": {
-    "@types/jest": "^23.3.2",
-    "@types/react": "^15.6.19",
+    "@types/jest": "^23.3.13",
+    "@types/react": "^15.6.21",
     "jest": "^23.6.0",
-    "ts-jest": "^23.10.0",
-    "typescript": "^3.0.3"
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.1"
   },
   "jest": {
     "moduleFileExtensions": [
