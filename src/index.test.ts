@@ -1,9 +1,8 @@
 import mergeProps from './index';
-import { MergeableProps } from './types';
 
 describe('mergeProps', () => {
   test('a single set of props is passed through', () => {
-    const props: MergeableProps = {
+    const props = {
       onClick: () => {},
       onKeyDown: () => {},
       className: 'className'
@@ -77,14 +76,14 @@ describe('mergeProps', () => {
 
   test('first instance of unknown prop is passed through', () => {
     const unknown = {};
-    expect(mergeProps({ unknown } as any).unknown).toBe(unknown);
+    expect(mergeProps({ unknown }).unknown).toBe(unknown);
   });
 
   test('second instance of unknown prop throws an error', () => {
     const unknown = {};
     expect(() => mergeProps(
-      { unknown } as any,
-      { unknown } as any)
+      { unknown },
+      { unknown })
     ).toThrow(/unknown/);
   })
 });
