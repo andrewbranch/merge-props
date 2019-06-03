@@ -8,7 +8,7 @@ function pushProp(
   if (key === 'className') {
     target.className = [target.className, value].join(' ').trim();
   } else if (key === 'style') {
-    target.style = { ...target.style, ...(value as React.CSSProperties) };
+    target.style = { ...target.style, ...value };
   } else if (typeof value === 'function') {
     const oldFn = target[key] as Function | undefined;
     target[key] = oldFn ? (...args: any[]) => {
