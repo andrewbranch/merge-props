@@ -1,6 +1,6 @@
 # merge-props [![Build Status](https://travis-ci.org/andrewbranch/merge-props.svg?branch=master)](https://travis-ci.org/andrewbranch/merge-props) [![codecov](https://codecov.io/gh/andrewbranch/merge-props/branch/master/graph/badge.svg)](https://codecov.io/gh/andrewbranch/merge-props) [![npm](https://img.shields.io/npm/v/merge-props.svg)](https://www.npmjs.com/package/merge-props) ![size](https://img.shields.io/bundlephobia/minzip/merge-props.svg)
 
-Merges React `className`, `style`, and DOM event handlers (`onClick`, `onFocus`, `on{LiterallyEveryEvent}`) by the following rules:
+Merges React `className`, `style`, and event handlers (`onClick`, `onFocus`, `on{LiterallyEveryEvent}`) by the following rules:
 
 - `className` props are concatenated
 - `style` props are shallow merged with later values taking precedence
@@ -29,7 +29,7 @@ The button will have a `className` of `"blue button"`, a `style` equal to `{ dis
 
 ## Why is this useful?
 
-One useful pattern for [render props](https://reactjs.org/docs/render-props.html) is having them pass props that are meant to be spread over the returned element to faciliate communication between the parent component and the render prop element. For example, consider a Tooltip component that decorate any DOM element or React component that accepts event handlers. If the Tooltip wants to avoid rendering a wrapper around its “trigger” element, it could use a render prop to inject `onMouseEnter`, `onMouseLeave`, `onFocus`, `onBlur`, and various WAI-ARIA attributes:
+One useful pattern for [render props](https://reactjs.org/docs/render-props.html) is having them pass props that are meant to be spread over the returned element to facilitate communication between the parent component and the render prop element. For example, consider a Tooltip component that decorate any DOM element or React component that accepts event handlers. If the Tooltip wants to avoid rendering a wrapper around its “trigger” element, it could use a render prop to inject `onMouseEnter`, `onMouseLeave`, `onFocus`, `onBlur`, and various WAI-ARIA attributes:
 
 ```jsx
 <Tooltip text="Some extra information about this button">
@@ -94,9 +94,6 @@ Enter `mergeProps`:
 
 It runs Tooltip’s `onFocus` and `onBlur` right before your own handlers, combines Tooltip’s `className` with `pretty-blue`, and even merges your `style` prop with one that Tooltip might want to add.
 
-## Type safety
-
-This project is written in TypeScript. Aside from class names and styles, it’s designed to merge event handlers, which are whitelisted under `React.DOMAttributes`. As such, the type of the input `props` is constrained to valid event handler names. Technically though, the implementation doesn‘t check for event handler names; it just checks to see if the prop is a function, so you _could_ use this package to combine any kind of function props, but to me, that feels fragile. If you have a compelling reason why this package _should_ accept any kind of function props as valid inputs, I’d be happy to hear your use case in an [issue](https://github.com/andrewbranch/merge-props/issues/new).
 
 ## Gotchas
 
