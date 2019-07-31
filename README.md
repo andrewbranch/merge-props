@@ -114,6 +114,10 @@ const merged = mergeProps({ role: 'button' }, { role: 'presentation' });
 // Error: Didn’t know how to merge prop 'role'.
 ```
 
+## Related
+
+* [babel-plugin-jsx-merge-props](https://github.com/hooriza/babel-plugin-jsx-merge-props): Makes to use easier with babel-plugin
+
 ## Contributing
 
 Changes should be tested and have 100% coverage:
