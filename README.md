@@ -116,7 +116,7 @@ const merged = mergeProps({ role: 'button' }, { role: 'presentation' });
 
 ## Related
 
-* [babel-plugin-jsx-merge-props](https://github.com/hooriza/babel-plugin-jsx-merge-props): Makes to use easier with babel-plugin
+* [babel-plugin-jsx-merge-props](https://github.com/hooriza/babel-plugin-jsx-merge-props): Use merge-props automatically via a Babel plugin
 
 ## Contributing
 
