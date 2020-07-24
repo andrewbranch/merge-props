@@ -15,6 +15,8 @@ function pushProp(
       oldFn(...args);
       (value as Function)(...args);
     } : value;
+  } else if (value === undefined) {
+    return
   } else if (!(key in target)) {
     target[key] = value;
   } else {
@@ -36,7 +38,10 @@ export default function mergeProps<T extends {}[]>(...props: T): {
   [K in keyof UnionToIntersection<T[number]>]:
       K extends 'className' ? string :
       K extends 'style' ? UnionToIntersection<T[number]>[K] :
-      Extract<T[number], { [Q in K]: unknown }>[K];
+      Exclude<
+        Extract<T[number], { [Q in K]: unknown }>[K],
+        undefined
+      >;
 } {
   if (props.length === 1) {
     return props[0] as any;

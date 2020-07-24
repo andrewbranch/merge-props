@@ -86,4 +86,24 @@ describe('mergeProps', () => {
       { unknown })
     ).toThrow(/unknown/);
   })
+
+  test("undefined functions are skipped", () => {
+    let tape = "";
+    const one = () => tape += "only one";
+
+    mergeProps(
+      { onClick: one },
+      { onClick: undefined }
+    ).onClick();
+
+    expect(tape).toBe("only one");
+  });
+
+  test("undefined values are skipped", () => {
+    expect(mergeProps(
+      { isDisabled: undefined }, 
+      { isDisabled: true },
+      { isDisabled: undefined }
+    ).isDisabled).toBe(true)
+  })
 });
