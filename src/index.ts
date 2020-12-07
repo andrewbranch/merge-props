@@ -15,7 +15,12 @@ function pushProp(
       oldFn(...args);
       (value as Function)(...args);
     } : value;
-  } else if (value === undefined) {
+  } else if (
+      // skip merging undefined values
+      value === undefined ||
+      // skip if both value are the same primitive value
+      (typeof value !== 'object' && value === target[key])
+    ) {
     return
   } else if (!(key in target)) {
     target[key] = value;

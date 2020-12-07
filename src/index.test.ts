@@ -106,4 +106,17 @@ describe('mergeProps', () => {
       { isDisabled: undefined }
     ).isDisabled).toBe(true)
   })
+
+  test('same string properties are passed through', () => {
+    expect(mergeProps(
+      { label: "Don't panic" }, 
+      { label: "Don't panic" }
+    ).label).toBe("Don't panic")
+  })
+  test('same number properties are passed through', () => {
+    expect(mergeProps(
+      { value: 42 }, 
+      { value: 42 }
+    ).value).toBe(42)
+  })
 });
